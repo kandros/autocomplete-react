@@ -2,7 +2,18 @@ module.exports =
   # This will work on JavaScript and CoffeeScript files, but not in js comments.
   selector: '.meta.class.body.js'
 
+  getPrefix: (editor) ->
+    # sel = atom.views.getView(editor)
+    #   .shadowRoot
+    #   .querySelector('.class.type')
+    # console.log sel.closest('.line')
+    # sel.closest('.line')
+    #   .textContent
+    #   .includes('Component')
+    false
+
   getSuggestions: (request) ->
+    prefix = @getPrefix(request.editor)
     console.log request
     new Promise (resolve) ->
       # Find your suggestions here
