@@ -1,6 +1,6 @@
 module.exports =
   # This will work on JavaScript and CoffeeScript files, but not in js comments.
-  selector: '*'
+  selector: '.meta.class.body.js'
 
   getSuggestions: (request) ->
     console.log request
